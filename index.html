@@ -19,12 +19,36 @@
   
   .cafetera {
     position: absolute;
-    top: 20px;
+    top: 100px;
     left: 20px;
     width: 210px;
-    height: 240px;
+    height: 180px;
     border: 1px solid orange;
     z-index: -1;
+    transform: perspective(20px) rotateX(-1deg);
+  }
+  
+  .cafetera-lid {
+    position: absolute;
+    top: -40px;
+    left: -1px;
+    width: 210px;
+    height: 40px;
+    border: 1px solid orange;
+    border-radius: 100px 100px 0 0;
+    
+  }
+  
+  .cafetera-bottom {
+    position: absolute;
+    bottom: 180px;
+    left: 28px;
+    height: 50px;
+    width: 194px;
+    height: 45px;
+    border: 1px solid orange;
+    z-index: 2;
+    
   }
   
   .bustello {
@@ -48,16 +72,16 @@
     height: 92px;
   }
   
-  .top-cup {
-    position: absolute;
-    bottom: 100px;
-    left: 200px;
-  }
-  
   .bottom-cup {
     position: absolute;
-    top: 200px;
-    left: 200px;
+    bottom: 50px;
+    left: 500px;
+  }
+  
+  .top-cup {
+    position: absolute;
+    top: 260px;
+    left: 500px;
   }
   
   .triangle {
@@ -92,7 +116,10 @@
 </style>
 
 <div class="frame">
-  <div class="cafetera"></div>
+  <div class="cafetera">
+    <div class="cafetera-lid"></div>
+  </div>
+  <div class="cafetera-bottom"></div>
   <div class="bustello left-can"></div>
   <div class="bustello right-can"></div>
   <div class="cup top-cup">
