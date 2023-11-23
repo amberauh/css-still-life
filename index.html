@@ -12,7 +12,7 @@
   
   .frame {
     position: relative;
-    width: 500px;
+    width: 700px;
     height: 500px;
     border: 1px solid black;
   }
@@ -43,12 +43,24 @@
     position: absolute;
     bottom: 180px;
     left: 28px;
-    height: 50px;
-    width: 194px;
     height: 45px;
+    width: 194px;
     border: 1px solid orange;
     z-index: 2;
     
+  }
+  
+  .metal-bottom {
+    position: absolute;
+    bottom: 55px;
+    left: 21px;
+    height: 130px;
+    width: 208px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    transform: perspective(15px) rotateX(1deg);
+    background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(221,233,215,1) 4%, rgba(195,195,195,1) 9%, rgba(221,233,215,1) 14%, rgba(217,215,212,0) 16%, rgba(195,195,195,1) 18%, rgba(226,228,224,1) 22%, rgba(145,145,145,1) 30%, rgba(186,215,247,1) 45%, rgba(145,145,145,1) 52%, rgba(216,224,212,1) 58%, rgba(91,91,91,0) 80%)
+      ;
   }
   
   .bustello {
@@ -75,13 +87,13 @@
   .bottom-cup {
     position: absolute;
     bottom: 50px;
-    left: 500px;
+    left: 400px;
   }
   
   .top-cup {
     position: absolute;
     top: 260px;
-    left: 500px;
+    left: 400px;
   }
   
   .triangle {
@@ -120,6 +132,8 @@
     <div class="cafetera-lid"></div>
   </div>
   <div class="cafetera-bottom"></div>
+  <div class="metal-bottom"></div>
+  
   <div class="bustello left-can"></div>
   <div class="bustello right-can"></div>
   <div class="cup top-cup">
