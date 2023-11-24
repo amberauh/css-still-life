@@ -117,8 +117,52 @@
     border-radius: 5px 5px 15px 15px;
   }
   
-  .cup-lid {
+  .cup-handle {
     position: absolute;
+    width: 60px;
+    height: 30px;
+    border: 8px solid white;
+    left: -46px;
+    top: 30px;
+    z-index: 2;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    transform: rotate(-90deg);
+    
+  }
+  
+  .cup-handle-outline{
+    position: absolute;
+    width: 63px;
+    height: 33px;
+    border: 11px solid grey;
+    left: -48px;
+    top: 28.5px;
+    z-index: 2;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    transform: rotate(-90deg);
+    z-index: 1;
+  }
+  
+  .cup-lid-shadow {
+    position: absolute;
+    width: 97%;
+    height: 5px;
+    border: 0.5px solid hsl(0, 0%, 78%);
+    transform: translate(1px, -4px);
+    background-color: hsl(0, 0%, 78%);
+    border-radius: 50%;
+  }
+  
+  .cup-lid-white {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    border: 0.5px solid grey;
+    border-radius: 22%;
+    transform: translate(0px, -8px);
+    background-color: white;
+    z-index: -1;
+    
   }
   
   .bottom-cup {
@@ -154,8 +198,6 @@
   }
   
   .stripes {
-/*     background-image: linear-gradient(hsl(216, 100%, 35%) 49%, hsl(0, 11%, 98%) 50%);
-    background-size: 100% 40%; */
     background: linear-gradient(0deg, rgba(33,73,176,1) 0%, rgba(57,98,206,1) 8%, rgba(54,90,184,1) 13%, rgba(33,73,176,1) 19%, rgba(255,255,255,1) 20%, rgba(240,245,255,1) 33%, rgba(255,255,255,1) 39%, rgba(33,73,176,1) 40%, rgba(57,98,206,1) 48%, rgba(54,90,184,1) 53%, rgba(33,73,176,1) 60%, rgba(255,255,255,1) 61%, rgba(240,245,255,1) 70%, rgba(255,255,255,1) 79%, rgba(89,110,175,1) 80%, rgba(33,73,176,1) 81%, rgba(57,98,206,1) 88%, rgba(54,90,184,1) 93%, rgba(33,61,148,1) 100%);
     width: 100%;
     height: 90%;
@@ -180,14 +222,18 @@
   <div class="bustello left-can"></div>
   <div class="bustello right-can"></div>
   <div class="cup top-cup">
-    <div class="cup-lid"></div>
+    <div class="cup-lid-shadow"></div>
+    <div class="cup-lid-white"></div>
+    <div class="cup-handle"></div>
+    <div class="cup-handle-outline"></div>
     <div class="triangle">
       <div class="star"></div>
     </div>
     <div class="stripes"></div>
   </div>
   <div class="cup bottom-cup">
-    <div class="cup-lid"></div>
+    <div class="cup-handle"></div>
+    <div class="cup-handle-outline"></div>
     <div class="triangle">
       <div class="star"></div>
     </div>
