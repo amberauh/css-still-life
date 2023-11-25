@@ -29,7 +29,16 @@
     position: relative;
     width: 700px;
     height: 500px;
-    border: 1px solid white;
+    border: 1px solid black;
+  }
+  
+  .table {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(90deg, rgba(204,187,158,1) 0%, rgba(226,207,174,1) 20%, rgba(245,226,194,1) 50%, rgba(226,207,174,1) 82%, rgba(204,187,158,1) 100%);
+    z-index: -4;
+    bottom: 0;
   }
   
   .cafetera {
@@ -105,10 +114,11 @@
     border: 1px solid hsl(0, 0%, 78%);
     border-radius: 8px;
     transform: perspective(15px) rotateX(1deg);
-    background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(221,233,215,1) 4%, rgba(195,195,195,1) 9%, rgba(221,233,215,1) 14%, rgba(217,215,212,0) 16%, rgba(195,195,195,1) 18%, rgba(226,228,224,1) 22%, rgba(145,145,145,1) 30%, rgba(145,145,145,1) 40%, rgba(186,215,247,1) 45%, rgba(186,215,247,1) 49%, rgba(145,145,145,1) 52%, rgba(145,145,145,1) 53%, rgba(216,224,212,1) 61%, rgba(216,224,212,1) 58%, rgba(91,91,91,0) 68%, rgba(195,196,194,1) 92%, rgba(245,214,21,1) 98%);
-    z-index: -3;
+    background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(221,233,215,1) 4%, rgba(195,195,195,1) 9%, rgba(221,233,215,1) 14%, rgba(255,255,255) 16%, rgba(195,195,195,1) 18%, rgba(226,228,224,1) 22%, rgba(145,145,145,1) 30%, rgba(145,145,145,1) 40%, rgba(186,215,247,1) 45%, rgba(186,215,247,1) 49%, rgba(145,145,145,1) 52%, rgba(145,145,145,1) 53%, rgba(216,224,212,1) 61%, rgba(216,224,212,1) 58%, rgba(255,255,255) 68%, rgba(195,196,194,1) 92%, rgba(245,214,21,1) 98%);
+    z-index: -1;
   }
   
+
   .bustello {
     position: absolute;
     width: 250px;
@@ -235,25 +245,25 @@
   
   .barcode {
     position: absolute;
-    background: repeating-linear-gradient(white, black 4px, white 7.5px);
-    width: 30px;
+    background: repeating-linear-gradient(white, black 4px, white 5px);
+    width: 26px;
     height: 90px;
-    bottom: 20px;
+    bottom: 22px;
     right: 0px;
     z-index: 1;
-    transform: skewY(-7deg);
+    transform: skewY(-8deg) translate(-2px);
   }
   
   
   .barcode-outline {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 110px;
-    background: white;
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 36%, rgba(210,210,210,1) 100%);
     bottom: 12px;
     right: 0px;
     z-index: 0;
-    transform: skewY(-4deg);
+    transform: skewY(-7deg)
   }
   
   .barcode-outline-curve1 {
@@ -268,9 +278,24 @@
   .barcode-outline-curve2 {
     position: absolute;
     width: 100%;
-    border: 3px solid white;
+    border: 3px solid linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 36%, rgba(210,210,210,1) 100%);
     border-radius: 50%;
     bottom: -3px;
+    
+  }
+  
+  .red-outline {
+    position: absolute;
+    width: 35px;
+    height: 120px;
+    border: 1px solid red;
+    top: 30px;
+    right: 0;
+    transform: skewY(-10deg);
+    font-family: "Newside";
+    font-size: 7px;
+    padding: 3px;
+    word-wrap: break-word;
     
   }
   
@@ -303,7 +328,7 @@
     border: 8px solid white;
     left: -46px;
     top: 30px;
-    z-index: 3;
+    z-index: 4;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     transform: rotate(-90deg);
     
@@ -318,7 +343,7 @@
     top: 28.5px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     transform: rotate(-90deg);
-    z-index: 2;
+    z-index: 3;
   }
   
   .cup-lid-shadow {
@@ -434,6 +459,7 @@
 </style>
 
 <div class="frame">
+  <div class="table"></div>
   <div class="lid-top"></div>
   <div class="cafetera">
     <div class="cafetera-lid"></div>
@@ -475,6 +501,8 @@
     </div>
     <div class="white-text2">
       NET WT 10 0Z (283g)
+    </div>
+    <div class="red-outline">111111111111111111111111111111hello world this took forever to make! 111111111111111111
     </div>
     <div class="red-tri"></div>
     <div class="stripe-tri"></div>
