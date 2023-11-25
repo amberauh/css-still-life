@@ -134,6 +134,10 @@
     
   }
   
+  .bustello-font{
+    position: absolute;
+  }
+  
   .left-can {
     position: absolute;
     left: 233px;
@@ -216,6 +220,37 @@
     left: 230px;
   }
   
+  .third-cup {
+    position: absolute;
+    top: 80px;
+    left: 300px;
+  }
+  
+  .right-handle {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: 8px solid white;
+    top: 30px;
+    right: -47px;
+    z-index: 3;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .right-cup-handle-outline{
+    position: absolute;
+    width: 63px;
+    height: 33px;
+    border: 11px solid grey;
+    top: 28.5px;
+    right: -49px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    transform: rotate(-90deg);
+    z-index: 2;
+  }
+  
+  
   .triangle {
     width: 30%;
     height: 60%;
@@ -288,5 +323,10 @@
     </div>
     <div class="stripes"></div>
     <div class="strips"></div>
+  </div>
+  <div class="cup third-cup">
+    <div class="stripes"></div>
+    <div class="right-handle"></div>
+    <div class="right-cup-handle-outline"></div>
   </div>
 </div>
