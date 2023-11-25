@@ -171,10 +171,42 @@
   .barcode {
     position: absolute;
     background: repeating-linear-gradient(white, black 4px, white  10px);
-    width: 50px;
+    width: 40px;
     height: 90px;
     bottom: 20px;
     right: 0px;
+    z-index: 1;
+    transform: skewY(-5deg);
+  }
+  
+  
+  .barcode-outline {
+    position: absolute;
+    width: 50px;
+    height: 110px;
+    background: white;
+    bottom: 12px;
+    right: 0px;
+    z-index: 0;
+    transform: skewY(-4deg);
+  }
+  
+  .barcode-outline-curve1 {
+    position: absolute;
+    width: 100%;
+    border: 4px solid rgb(255, 223, 0);
+    border-radius: 50%;
+    top: -5px;
+    
+  }
+  
+  .barcode-outline-curve2 {
+    position: absolute;
+    width: 100%;
+    border: 4px solid white;
+    border-radius: 50%;
+    bottom: -4px;
+    
   }
   
   .left-can {
@@ -226,24 +258,36 @@
   
   .cup-lid-shadow {
     position: absolute;
-    width: 97%;
+    width: 85%;
     height: 5px;
-    border: 0.5px solid hsl(0, 0%, 78%);
-    transform: translate(1px, -4px);
+    border: 0.1px solid hsl(0, 0%, 78%);
+    transform: translate(6px, -1.5px);
     background-color: hsl(0, 0%, 78%);
     border-radius: 50%;
   }
   
-  .cup-lid-white {
+  
+  .cup-lid-white1 {
     position: absolute;
-    width: 88px;
+    width: 87px;
     height: 25px;
     border: 0.2px solid grey;
-    border-radius: 5px 5px 15px 15px;
-    transform: translate(-1px, -7px);
+    border-radius: 40%;
+/*     border-radius: 5px 5px 15px 15px; */
+    transform: translate(-0.5px, -7.5px);
     background-color: white;
     z-index: -1;
     
+  }
+  
+  .cup-lid-white2 {
+    position: absolute;
+    width: 86px;
+    height: 6px;
+    border: 0.2px solid transparent;
+    border-radius: 40%;
+    transform: translate(0px, 3px);
+    background-color: white;
   }
   
   .bottom-cup {
@@ -348,10 +392,15 @@
     <div class="cafe-font">CAFE'</div>
     <div class="red-tri"></div>
     <div class="barcode"></div>
+    <div class="barcode-outline">
+      <div class="barcode-outline-curve1"></div>
+      <div class="barcode-outline-curve2"></div>
+    </div>
   </div>
   <div class="cup top-cup">
     <div class="cup-lid-shadow"></div>
-    <div class="cup-lid-white"></div>
+    <div class="cup-lid-white1"></div>
+    <div class="cup-lid-white2"></div>
     <div class="cup-handle"></div>
     <div class="cup-handle-outline"></div>
     <div class="triangle">
@@ -369,6 +418,9 @@
     <div class="strips"></div>
   </div>
   <div class="cup third-cup">
+    <div class="cup-lid-shadow"></div>
+    <div class="cup-lid-white1"></div>
+    <div class="cup-lid-white2"></div>
     <div class="stripes"></div>
     <div class="right-handle"></div>
     <div class="right-cup-handle-outline"></div>
