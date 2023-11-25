@@ -10,17 +10,27 @@
     margin: 0;
   }
   
+  @font-face {
+    font-family: "Wabene";
+    src: url("Wabene.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Acme";
+    src: url("Acme Gothic Wide Bold.otf") format("opentype")
+  }
+  
   .frame {
     position: relative;
     width: 700px;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid white;
   }
   
   .cafetera {
     position: absolute;
     top: 100px;
-    left: 20px;
+    left: 70px;
     width: 210px;
     height: 180px;
     border: 1px solid orange;
@@ -34,7 +44,7 @@
     position: absolute;
     height: 35px;
     top: 15px;
-    left: 110px;
+    left: 160px;
     width: 30px;
     border: 1px solid grey;
     border-radius: 2px;
@@ -58,7 +68,7 @@
   .cafetera-handle {
     position: relative;
     top: 100px;
-    left: -20px;
+    left: 30px;
     width: 35px;
     height: 170px;
     border: 1px solid grey;
@@ -71,7 +81,7 @@
   .orange-bottom {
     position: absolute;
     bottom: 180px;
-    left: 28px;
+    left: 78px;
     height: 45px;
     width: 194px;
     border: 1px solid orange;
@@ -84,7 +94,7 @@
   .metal-bottom {
     position: absolute;
     bottom: 55px;
-    left: 21px;
+    left: 71px;
     height: 130px;
     width: 208px;
     border: 1px solid hsl(0, 0%, 78%);
@@ -136,17 +146,36 @@
   
   .bustello-font{
     position: absolute;
+    font-family: "Wabene", serif;
+    font-size: 45px;
+    top: 110px;
+    
+  }
+  
+  .cafe-font{
+    position: absolute;
+    font-family: "Acme", serif;
+    font-size: 50px;
+    top: 45px;
+  }
+  
+  .red-tri {
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: red;
+    transform: translate(160px, 65px);
   }
   
   .left-can {
     position: absolute;
-    left: 233px;
+    left: 283px;
     bottom: 46px;
   }
   
   .right-can {
     position: absolute;
-    right: 90px;
+    right: 40px;
     bottom: 25px;
   }
   
@@ -210,20 +239,20 @@
   .bottom-cup {
     position: absolute;
     bottom: 25px;
-    left: 230px;
+    left: 280px;
     background: white;
   }
   
   .top-cup {
     position: absolute;
     top: 290px;
-    left: 230px;
+    left: 280px;
   }
   
   .third-cup {
     position: absolute;
     top: 80px;
-    left: 300px;
+    left: 350px;
   }
   
   .right-handle {
@@ -257,7 +286,6 @@
     background: linear-gradient(0deg, rgba(158,29,27,1) 0%, rgba(233,60,48,1) 46%, rgba(249,73,53,1) 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 50%);
     transform: translate(-1.5px, 34%);
-    border-radius: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,11 +327,16 @@
     <div class="bustello-lid"></div>
     <div class="bustello-lid-shadow"></div>
     <div class="bustello-red"></div>
+    <div class="bustello-font">BUSTELO'</div>
+    <div class="cafe-font">CAFE'</div>
   </div>
   <div class="bustello right-can">
     <div class="bustello-lid"></div>
     <div class="bustello-lid-shadow"></div>
     <div class="bustello-red"></div>
+    <div class="bustello-font">BUSTELO'</div>
+    <div class="cafe-font">CAFE'</div>
+    <div class="red-tri"></div>
   </div>
   <div class="cup top-cup">
     <div class="cup-lid-shadow"></div>
